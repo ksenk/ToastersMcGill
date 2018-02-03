@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="703-4V-yAM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zOS-Dk-IED">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-101" y="-243"/>
         </scene>
-        <!--Data View Controller-->
+        <!--Item-->
         <scene sceneID="snT-py-3hH">
             <objects>
                 <viewController storyboardIdentifier="DataViewController" id="S4R-Ja-viH" customClass="DataViewController" customModule="Inventory" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-V9-EN7">
-                                <rect key="frame" x="20" y="45" width="335" height="608"/>
+                                <rect key="frame" x="20" y="45" width="335" height="559"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="air-X0-fhk">
                                         <rect key="frame" x="8" y="65" width="319" height="524"/>
@@ -80,6 +80,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K9I-jD-KjA"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="iSA-PJ-qQP"/>
                     <connections>
                         <outlet property="dataLabel" destination="cF2-Le-7mQ" id="3EH-BK-JV6"/>
                     </connections>
@@ -132,6 +133,7 @@
                     <connections>
                         <segue destination="o09-ka-loh" kind="relationship" relationship="viewControllers" id="Q8C-aG-Zuh"/>
                         <segue destination="Hdn-v8-WSV" kind="relationship" relationship="viewControllers" id="G8y-mW-lMF"/>
+                        <segue destination="S4R-Ja-viH" kind="relationship" relationship="viewControllers" id="e6M-t0-bNx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDa-9j-S8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
