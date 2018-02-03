@@ -44,7 +44,7 @@
                                 <rect key="frame" x="20" y="45" width="335" height="608"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="coffee" translatesAutoresizingMaskIntoConstraints="NO" id="air-X0-fhk">
-                                        <rect key="frame" x="16" y="8" width="319" height="524"/>
+                                        <rect key="frame" x="8" y="65" width="319" height="524"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
