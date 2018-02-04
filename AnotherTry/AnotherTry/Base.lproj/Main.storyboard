@@ -197,7 +197,7 @@
         <!--Home-->
         <scene sceneID="Sit-6z-BDz">
             <objects>
-                <viewController id="HOd-Tv-aXi" sceneMemberID="viewController">
+                <viewController id="HOd-Tv-aXi" customClass="Home" customModule="AnotherTry" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7n5-qd-T7E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,54 +209,47 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What would you like to do?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2u-kV-JsT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have 0 new notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2u-kV-JsT">
                                 <rect key="frame" x="62" y="171" width="271" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCT-ay-z9p">
-                                <rect key="frame" x="53" y="280" width="110" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Full Inventory"/>
-                                <connections>
-                                    <segue destination="6qb-3F-S44" kind="popoverPresentation" popoverAnchorView="zCT-ay-z9p" id="waL-5C-iyX">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSi-xb-MeJ">
-                                <rect key="frame" x="18" y="318" width="271" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Quick add item running low"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What item is running low?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EiY-NH-sgw">
-                                <rect key="frame" x="62" y="356" width="187" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mq8-pg-WHT">
-                                <rect key="frame" x="52" y="240" width="197" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="All Low Stock Notifications"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtI-Eq-GKi">
-                                <rect key="frame" x="58" y="459" width="99" height="30"/>
+                                <rect key="frame" x="62" y="519" width="99" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="My Settings"/>
                             </button>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MWp-1x-VMc">
+                                <rect key="frame" x="0.0" y="342" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="Au9-0x-a8z"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocv-yi-mjH">
+                                <rect key="frame" x="62" y="327" width="250" height="30"/>
+                                <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="bID-sS-eCt"/>
+                                    <constraint firstAttribute="height" constant="40" id="pNb-bM-aaP"/>
+                                </constraints>
+                                <state key="normal" title="Pikolo Espresso Bar ">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ocv-yi-mjH" firstAttribute="centerX" secondItem="7n5-qd-T7E" secondAttribute="centerX" id="Xkh-bb-MAB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Xqd-rx-Dhn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="Q0Y-hi-tgs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbC-hE-YRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="166" y="834"/>
+            <point key="canvasLocation" x="165.59999999999999" y="833.43328335832086"/>
         </scene>
         <!--Inventory-->
         <scene sceneID="g1D-48-7e5">
@@ -423,9 +416,7 @@
         <image name="coffee" width="320" height="491"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lfm-Nd-WTY"/>
-        <segue reference="SPC-lH-soE"/>
         <segue reference="sZa-DX-Ggj"/>
-        <segue reference="hfV-Wd-VJL"/>
+        <segue reference="uVO-cr-4Ba"/>
     </inferredMetricsTieBreakers>
 </document>
