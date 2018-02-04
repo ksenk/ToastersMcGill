@@ -8,28 +8,47 @@
 
 import UIKit
 
-class Home: UIViewController {
+class Home: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var selectionButton: UIButton!
+    
+    let cafeList = ["Pikolo Espresso Bar", "Myriade on Mackay", "Myriad St-Denis"]
+    
     override func viewDidLoad() {
+        
+        pickerView.isHidden = true
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func selectPressed(_ sender: UIButton) {
+        if pickerView.isHidden {
+            pickerView.isHidden = false
+        }
+    }
+   
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return cafeList.count
     }
-    */
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return cafeList[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        selectionButton.setTitle(cafeList[row], for: .normal)
+        pickerView.isHidden = true
+    }
+
 
 }

@@ -202,16 +202,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0im-e4-QOp">
-                                <rect key="frame" x="62" y="52" width="245" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0im-e4-QOp">
+                                <rect key="frame" x="62" y="52" width="167" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have 0 new notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2u-kV-JsT">
-                                <rect key="frame" x="62" y="171" width="271" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have 0 new notifications" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2u-kV-JsT">
+                                <rect key="frame" x="62" y="153" width="271" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -221,31 +219,52 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="My Settings"/>
                             </button>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MWp-1x-VMc">
-                                <rect key="frame" x="0.0" y="342" width="375" height="162"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWp-1x-VMc">
+                                <rect key="frame" x="0.0" y="324" width="375" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="Au9-0x-a8z"/>
                                 </constraints>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocv-yi-mjH">
-                                <rect key="frame" x="62" y="327" width="250" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ocv-yi-mjH">
+                                <rect key="frame" x="62" y="309" width="250" height="40"/>
                                 <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="bID-sS-eCt"/>
                                     <constraint firstAttribute="height" constant="40" id="pNb-bM-aaP"/>
                                 </constraints>
-                                <state key="normal" title="Pikolo Espresso Bar ">
+                                <state key="normal" title="My Café">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectPressed:" destination="HOd-Tv-aXi" eventType="touchUpInside" id="Uph-UE-ORx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Ocv-yi-mjH" firstAttribute="leading" secondItem="Xqd-rx-Dhn" secondAttribute="leading" constant="62" id="10n-iy-dMA"/>
+                            <constraint firstItem="Xqd-rx-Dhn" firstAttribute="trailing" secondItem="Ocv-yi-mjH" secondAttribute="trailing" constant="63" id="C56-IV-0wQ"/>
+                            <constraint firstItem="m2u-kV-JsT" firstAttribute="top" secondItem="0im-e4-QOp" secondAttribute="bottom" constant="54" id="GpB-f4-PO1"/>
+                            <constraint firstItem="MWp-1x-VMc" firstAttribute="top" secondItem="m2u-kV-JsT" secondAttribute="bottom" constant="150" id="IJ4-cb-WYb"/>
+                            <constraint firstItem="Xqd-rx-Dhn" firstAttribute="trailing" secondItem="Ocv-yi-mjH" secondAttribute="trailing" constant="63" id="Pvw-4j-oMK"/>
                             <constraint firstItem="Ocv-yi-mjH" firstAttribute="centerX" secondItem="7n5-qd-T7E" secondAttribute="centerX" id="Xkh-bb-MAB"/>
+                            <constraint firstItem="MWp-1x-VMc" firstAttribute="leading" secondItem="Xqd-rx-Dhn" secondAttribute="leading" id="bq5-AU-kJO"/>
+                            <constraint firstItem="MWp-1x-VMc" firstAttribute="top" secondItem="m2u-kV-JsT" secondAttribute="bottom" constant="150" id="ibz-Ro-jMS"/>
+                            <constraint firstItem="0im-e4-QOp" firstAttribute="leading" secondItem="Xqd-rx-Dhn" secondAttribute="leading" constant="62" id="mX4-qC-bdI"/>
+                            <constraint firstItem="MWp-1x-VMc" firstAttribute="trailing" secondItem="Xqd-rx-Dhn" secondAttribute="trailing" id="nB2-9I-0jh"/>
+                            <constraint firstItem="m2u-kV-JsT" firstAttribute="leading" secondItem="Xqd-rx-Dhn" secondAttribute="leading" constant="62" id="rut-SU-vq2"/>
+                            <constraint firstItem="0im-e4-QOp" firstAttribute="top" secondItem="Xqd-rx-Dhn" secondAttribute="top" constant="32" id="sP3-rL-yBP"/>
+                            <constraint firstItem="Ocv-yi-mjH" firstAttribute="leading" secondItem="Xqd-rx-Dhn" secondAttribute="leading" constant="62" id="v2T-QK-Her"/>
+                            <constraint firstItem="Xqd-rx-Dhn" firstAttribute="trailing" secondItem="m2u-kV-JsT" secondAttribute="trailing" constant="42" id="vAD-tZ-HCb"/>
+                            <constraint firstItem="Ocv-yi-mjH" firstAttribute="top" secondItem="m2u-kV-JsT" secondAttribute="bottom" constant="135" id="w4x-eb-Atm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xqd-rx-Dhn"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="Q0Y-hi-tgs"/>
+                    <connections>
+                        <outlet property="pickerView" destination="MWp-1x-VMc" id="M0c-Gz-8YX"/>
+                        <outlet property="selectionButton" destination="Ocv-yi-mjH" id="6VL-6Q-X4t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbC-hE-YRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
